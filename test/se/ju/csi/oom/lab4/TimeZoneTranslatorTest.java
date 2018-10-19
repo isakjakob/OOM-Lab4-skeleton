@@ -50,5 +50,13 @@ public class TimeZoneTranslatorTest {
 		
 		assertEquals(TimeZoneTranslator.shiftEventTimeZone(birthdayParty, TimeZone.GREENWICH_UTC, TimeZone.HALIFAX).toString(), birthdayPartyShifted.toString());
 	}
+	
+	@Test
+	public void testDateTimeString() {
+		DateTime theDate2 = new DateTime(2018, 6, 17, 12, 0, 0);
+		DateTime theDate3 = new DateTime("\\\\2\\\\0\\\\1\\\\8)-(\\\\0\\\\6)-(\\\\1\\\\7) (\\\\1\\\\2):(\\\\0\\\\0):(\\\\0\\\\0");
+		
+		assertEquals(theDate2.toString(), theDate3.toString());
+	}
 
 }
