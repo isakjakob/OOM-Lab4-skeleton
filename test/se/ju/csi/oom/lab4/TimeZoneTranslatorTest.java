@@ -53,10 +53,13 @@ public class TimeZoneTranslatorTest {
 	
 	@Test
 	public void testDateTimeString() {
-		DateTime theDate2 = new DateTime(2018, 6, 17, 12, 0, 0);
-		DateTime theDate3 = new DateTime("\\\\2\\\\0\\\\1\\\\8)-(\\\\0\\\\6)-(\\\\1\\\\7) (\\\\1\\\\2):(\\\\0\\\\0):(\\\\0\\\\0");
+		DateTime theDate2 = new DateTime(2018, 06, 17, 12, 00, 00);
+		DateTime theDate3 = new DateTime("2018-06-17 12:00:00");
+		String date2 = ("2018-06-17 12:00:00");
 		
-		assertEquals(theDate2.toString(), theDate3.toString());
+		assertEquals(theDate2.toString(), date2);
+		
+		assertEquals(theDate3.toString(), date2);
 	}
 
 }
